@@ -9,112 +9,103 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --nav:#0D0F1A; --nav2:#161A2B; --navline:#2A3048; --navtext:#F4F6FB; --navdim:#A6ADC2;
-  --mint:#15C8A0; --pink:#FF3D6E; --purple:#7C5CFF; --gold:#F0C53D; --coral:#FF7A4D; --sky:#4DA3FF;
+  color-scheme: light;
+  --ink:#16202E; --dim:#53627A; --faint:#8A93A3; --line:#E3E7EE; --soft:#F4F6FA; --paper:#FFFFFF;
+  --mint:#15C8A0; --pink:#FF3D6E; --purple:#7C5CFF; --gold:#C79A12; --coral:#FF7A4D; --sky:#2E7CC4;
   --hf:'Space Grotesk',sans-serif; --bf:'Inter',sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:var(--bf);background:#0A0C15;color:var(--navtext);line-height:1.6;-webkit-font-smoothing:antialiased}
-.sheet{max-width:920px;margin:0 auto;background:var(--nav);min-height:100vh}
-.pad{padding:0 48px}
+body{font-family:var(--bf);background:#EEF1F6;color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+.sheet{max-width:920px;margin:0 auto;background:var(--paper);min-height:100vh;box-shadow:0 0 60px rgba(22,32,46,.08)}
 h1,h2,h3,.logo,.mono,.big{font-family:var(--hf)}
 .mint{color:var(--mint)} .pink{color:var(--pink)} .gold{color:var(--gold)}
 
-/* top bar */
-.bar{display:flex;justify-content:space-between;align-items:center;padding:26px 48px;border-bottom:1px solid var(--navline)}
+.bar{display:flex;justify-content:space-between;align-items:center;padding:26px 48px;border-bottom:1px solid var(--line)}
 .logo{font-size:22px;font-weight:700;letter-spacing:.5px}
 .logo .s{color:var(--mint)}
-.kicker{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--navdim)}
+.kicker{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--faint)}
 
-/* hero */
-.hero{padding:52px 48px 44px;border-bottom:1px solid var(--navline)}
-.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--mint);border:1px solid var(--navline);border-radius:20px;padding:6px 14px;margin-bottom:22px}
+.hero{padding:52px 48px 44px;border-bottom:1px solid var(--line)}
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--mint);border:1px solid var(--line);border-radius:20px;padding:6px 14px;margin-bottom:22px}
 .hero h1{font-size:42px;line-height:1.05;font-weight:700;letter-spacing:-1px}
 .hero h1 .u{color:var(--mint)}
-.hero .sub{font-size:17px;color:var(--navdim);margin-top:18px;max-width:60ch}
-.prep{font-size:13px;color:var(--navdim);margin-top:24px}
-.prep b{color:var(--navtext)}
+.hero .sub{font-size:17px;color:var(--dim);margin-top:18px;max-width:60ch}
+.prep{font-size:13px;color:var(--dim);margin-top:24px}
+.prep b{color:var(--ink)}
 
-/* the gap */
-.gap{display:grid;grid-template-columns:1fr 1fr;gap:0;border-bottom:1px solid var(--navline)}
+.gap{display:grid;grid-template-columns:1fr 1fr;gap:0;border-bottom:1px solid var(--line)}
 .gcol{padding:38px 48px}
-.gcol:first-child{border-right:1px solid var(--navline)}
+.gcol.human{background:var(--soft)}
+.gcol:first-child{border-right:1px solid var(--line)}
 .gcol .lab{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px}
 .gcol.human .lab{color:var(--mint)}
 .gcol.machine .lab{color:var(--pink)}
-.gline{font-size:14px;color:var(--navtext);padding:9px 0;border-top:1px solid var(--navline);display:flex;gap:10px;align-items:flex-start}
+.gline{font-size:14px;color:var(--ink);padding:9px 0;border-top:1px solid var(--line);display:flex;gap:10px;align-items:flex-start}
 .gline:first-of-type{border-top:none}
 .gline .d{color:var(--mint);font-weight:700;flex-shrink:0}
 .gcol.machine .gline .d{color:var(--pink)}
 .gbig{font-size:52px;font-weight:700;font-family:var(--hf);line-height:1;margin-bottom:6px}
 .gcol.human .gbig{color:var(--mint)}
 .gcol.machine .gbig{color:var(--pink)}
-.gsmall{font-size:13px;color:var(--navdim);margin-bottom:22px}
+.gsmall{font-size:13px;color:var(--dim);margin-bottom:22px}
 
-/* section */
-.sec{padding:44px 48px;border-bottom:1px solid var(--navline)}
+.sec{padding:44px 48px;border-bottom:1px solid var(--line)}
 .sec-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--mint);margin-bottom:12px}
 .sec h2{font-size:27px;font-weight:700;letter-spacing:-.4px;margin-bottom:8px}
-.sec .intro{font-size:15px;color:var(--navdim);max-width:64ch;margin-bottom:26px}
+.sec .intro{font-size:15px;color:var(--dim);max-width:64ch;margin-bottom:26px}
 
-/* findings */
-.find{border:1px solid var(--navline);border-left:4px solid var(--pink);border-radius:12px;padding:20px 22px;margin-bottom:14px;background:var(--nav2)}
+.find{border:1px solid var(--line);border-left:4px solid var(--pink);border-radius:12px;padding:20px 22px;margin-bottom:14px;background:var(--paper)}
 .find:nth-child(2){border-left-color:var(--gold)}
 .find:nth-child(3){border-left-color:var(--purple)}
-.find .n{font-family:var(--hf);font-size:12px;font-weight:700;color:var(--navdim);letter-spacing:1px}
+.find .n{font-family:var(--hf);font-size:12px;font-weight:700;color:var(--faint);letter-spacing:1px}
 .find h3{font-size:18px;font-weight:700;margin:6px 0 8px}
-.find p{font-size:14px;color:var(--navdim)}
-.find p b{color:var(--navtext)}
+.find p{font-size:14px;color:var(--dim)}
+.find p b{color:var(--ink)}
 
-/* directional bars */
 .bars{margin-top:6px}
 .brow{display:flex;align-items:center;gap:14px;margin:12px 0}
 .brow .bl{width:130px;font-size:13.5px;font-weight:600;flex-shrink:0}
-.brow .track{flex:1;height:10px;background:var(--nav2);border-radius:6px;overflow:hidden}
+.brow .track{flex:1;height:10px;background:var(--soft);border-radius:6px;overflow:hidden;border:1px solid var(--line)}
 .brow .fill{height:10px;border-radius:6px}
 .brow .st{width:96px;text-align:right;font-size:11.5px;font-weight:700;font-family:var(--hf);flex-shrink:0}
 
-/* queries */
-.q{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 0;border-top:1px solid var(--navline)}
+.q{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 0;border-top:1px solid var(--line)}
 .q:first-of-type{border-top:none}
 .q .txt{font-size:14.5px}
 .q .pill{font-size:10.5px;font-weight:700;font-family:var(--hf);letter-spacing:.5px;text-transform:uppercase;padding:5px 11px;border-radius:14px;white-space:nowrap;flex-shrink:0}
-.pill.risk{background:rgba(255,61,110,.15);color:var(--pink);border:1px solid rgba(255,61,110,.4)}
-.pill.amb{background:rgba(240,197,61,.15);color:var(--gold);border:1px solid rgba(240,197,61,.4)}
-.pill.dark{background:rgba(166,173,194,.12);color:var(--navdim);border:1px solid var(--navline)}
+.pill.risk{background:rgba(255,61,110,.1);color:var(--pink);border:1px solid rgba(255,61,110,.35)}
+.pill.amb{background:rgba(199,154,18,.12);color:var(--gold);border:1px solid rgba(199,154,18,.35)}
+.pill.dark{background:var(--soft);color:var(--dim);border:1px solid var(--line)}
 
-/* locked upgrade */
-.lock{padding:44px 48px;background:linear-gradient(180deg,#0F1220,#0A0C15)}
+.lock{padding:44px 48px;background:linear-gradient(180deg,#F7F9FC,#EEF1F6)}
 .locktop{text-align:center;margin-bottom:26px}
 .locktop .tag{margin-bottom:14px}
 .locktop h2{font-size:26px;font-weight:700}
-.locktop p{font-size:14.5px;color:var(--navdim);max-width:56ch;margin:10px auto 0}
-.blur{position:relative;border:1px solid var(--navline);border-radius:16px;overflow:hidden;background:var(--nav2)}
-.blur .inner{padding:28px 30px;filter:blur(6px);opacity:.5;user-select:none;pointer-events:none}
+.locktop p{font-size:14.5px;color:var(--dim);max-width:56ch;margin:10px auto 0}
+.blur{position:relative;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--paper)}
+.blur .inner{padding:28px 30px;filter:blur(6px);opacity:.55;user-select:none;pointer-events:none}
 .blur .scorebig{font-size:70px;font-family:var(--hf);font-weight:700;color:var(--mint);line-height:1}
-.blur .lrow{display:flex;justify-content:space-between;padding:10px 0;border-top:1px solid var(--navline);font-size:14px}
-.blur .overlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px}
+.blur .lrow{display:flex;justify-content:space-between;padding:10px 0;border-top:1px solid var(--line);font-size:14px}
+.blur .overlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;background:rgba(255,255,255,.35)}
 .blur .overlay .ic{font-size:26px}
 .blur .overlay .t{font-family:var(--hf);font-weight:700;font-size:16px}
-.blur .overlay .s{font-size:12.5px;color:var(--navdim)}
+.blur .overlay .s{font-size:12.5px;color:var(--dim)}
 .unlock{margin-top:8px}
 .ul{display:flex;gap:12px;align-items:flex-start;padding:11px 0;font-size:14.5px}
 .ul .c{color:var(--mint);font-weight:700;flex-shrink:0}
 
-/* cta */
 .cta{padding:44px 48px;text-align:center}
 .cta h2{font-size:28px;font-weight:700;letter-spacing:-.4px}
-.cta p{font-size:15px;color:var(--navdim);margin:12px auto 26px;max-width:52ch}
+.cta p{font-size:15px;color:var(--dim);margin:12px auto 26px;max-width:52ch}
 .btn{display:inline-block;font-family:var(--hf);font-weight:700;font-size:16px;padding:16px 34px;border-radius:30px;background:var(--mint);color:#08130F;text-decoration:none}
-.cta .fine{font-size:12px;color:var(--navdim);margin-top:22px}
+.cta .fine{font-size:12px;color:var(--faint);margin-top:22px}
 
-/* footer */
-.foot{padding:26px 48px;border-top:1px solid var(--navline);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.foot{padding:26px 48px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;background:var(--soft)}
 .foot .l{font-family:var(--hf);font-weight:700}
-.foot .r{font-size:11.5px;color:var(--navdim);text-align:right}
+.foot .r{font-size:11.5px;color:var(--dim);text-align:right}
 @media(max-width:720px){
-  .pad,.hero,.sec,.lock,.cta,.gcol,.bar,.foot{padding-left:24px;padding-right:24px}
-  .hero h1{font-size:31px}.gap{grid-template-columns:1fr}.gcol:first-child{border-right:none;border-bottom:1px solid var(--navline)}
+  .hero,.sec,.lock,.cta,.gcol,.bar,.foot{padding-left:24px;padding-right:24px}
+  .hero h1{font-size:31px}.gap{grid-template-columns:1fr}.gcol:first-child{border-right:none;border-bottom:1px solid var(--line)}
   .brow .bl{width:96px}
 }
 </style>
@@ -127,15 +118,13 @@ h1,h2,h3,.logo,.mono,.big{font-family:var(--hf)}
     <div class="kicker">AI Signal Snapshot</div>
   </div>
 
-  <!-- HERO / THE HOOK -->
   <section class="hero">
-    <span class="tag">Free baseline · light scan</span>
+    <span class="tag">Michael Gordon · Free Baseline Audit</span>
     <h1>You are the #1 name on the Main Line.<br><span class="u">The machines aren't sure who you are.</span></h1>
     <p class="sub">For twenty five years, buyers and sellers have known exactly who to call. But a growing share of them now ask ChatGPT, Perplexity, and Google's AI first. This is a fast, free look at what those engines say when someone asks for the best agent on the Main Line, and where your real world authority is not yet reaching them.</p>
-    <p class="prep">Prepared for <b>Robin Gordon</b> · The Robin Gordon Group · Berkshire Hathaway HomeServices Fox &amp; Roach<br>By SignlLabs, the AI Signaling practice of GCW · September 2026</p>
+    <p class="prep">Prepared for <b>Michael Gordon</b> · The Robin Gordon Group · Berkshire Hathaway HomeServices Fox &amp; Roach<br>By SignlLabs, the AI Signaling practice of GCW · September 2026</p>
   </section>
 
-  <!-- THE GAP -->
   <div class="gap">
     <div class="gcol human">
       <div class="lab">Where humans rank you</div>
@@ -155,7 +144,6 @@ h1,h2,h3,.logo,.mono,.big{font-family:var(--hf)}
     </div>
   </div>
 
-  <!-- WHAT WE FOUND -->
   <section class="sec">
     <div class="sec-k">What a light scan already shows</div>
     <h2>Three gaps between your reputation and your signal</h2>
@@ -180,7 +168,6 @@ h1,h2,h3,.logo,.mono,.big{font-family:var(--hf)}
     </div>
   </section>
 
-  <!-- DIRECTIONAL READ -->
   <section class="sec">
     <div class="sec-k">The provisional read</div>
     <h2>How your six signals look at a glance</h2>
@@ -195,7 +182,6 @@ h1,h2,h3,.logo,.mono,.big{font-family:var(--hf)}
     </div>
   </section>
 
-  <!-- MONEY QUERIES -->
   <section class="sec">
     <div class="sec-k">The questions that send you clients</div>
     <h2>Where you should be the answer</h2>
@@ -206,7 +192,6 @@ h1,h2,h3,.logo,.mono,.big{font-family:var(--hf)}
     <div class="q"><div class="txt">"Top selling real estate team in Villanova PA"</div><div class="pill dark">Unverified</div></div>
   </section>
 
-  <!-- LOCKED UPGRADE -->
   <section class="lock">
     <div class="locktop">
       <span class="tag">The full baseline audit</span>
@@ -216,7 +201,7 @@ h1,h2,h3,.logo,.mono,.big{font-family:var(--hf)}
     <div class="blur">
       <div class="inner">
         <div class="scorebig">6X</div>
-        <div style="color:var(--navdim);font-size:14px;margin-bottom:14px">Maturity Method™ Score · 0 to 100 · Band: XXXXXXXX</div>
+        <div style="color:var(--dim);font-size:14px;margin-bottom:14px">Maturity Method™ Score · 0 to 100 · Band: XXXXXXXX</div>
         <div class="lrow"><span>Live results across 5 engines, 30 money queries</span><span class="mint">XX / 60 cited</span></div>
         <div class="lrow"><span>Competitor citation share on the Main Line</span><span class="mint">XX%</span></div>
         <div class="lrow"><span>Entity fix: schema, sameAs, disambiguation plan</span><span class="mint">Ready</span></div>
@@ -237,17 +222,16 @@ h1,h2,h3,.logo,.mono,.big{font-family:var(--hf)}
     </div>
   </section>
 
-  <!-- CTA -->
   <section class="cta">
     <h2>You won the Main Line. Now win the machines.</h2>
     <p>Let's run your full baseline and turn twenty five years of authority into the answer the engines give. It starts with one conversation.</p>
-    <a class="btn" href="https://signllabs.ai">Book your call →</a>
+    <a class="btn" href="mailto:erika@signllabs.ai?subject=My%20SignlLabs%20Baseline%20Audit">Book your call →</a>
     <p class="fine">SignlLabs does not guarantee rankings or citations. AI engines change constantly, and citation shifts typically appear over four to eight weeks of consistent work. This snapshot is a light, directional scan of public information as of September 2026, not the full audit.</p>
   </section>
 
   <div class="foot">
     <div class="l">Signl<span class="mint">Labs.</span></div>
-    <div class="r">The AI Signaling practice of GCW · Powered by the Maturity Method™<br>signllabs.ai · methodology by Erika Hanafin Austria</div>
+    <div class="r">The AI Signaling practice of GCW · Powered by the Maturity Method™<br>signllabs.ai</div>
   </div>
 
 </div>
